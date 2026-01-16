@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExellentTime</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="./Assets/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Intro -->
+    <section class="intro">
+      <div class="container">
+        <header>
+          <div class="logo">
+            <img class="logo" src="./Assets/intro/logo.png" alt="logo" />
+          </div>
+
+          <div class="title">
+            <p class="OfRepr">Официальный представитель</p>
+            <p class="brands">Reebok, Nike, Adidas</p>
+          </div>
+
+          <div class="contacts">
+            <p class="CallNumber">+7 (499) 922-89-74</p>
+            <a href="tel:+74999228974" class="call_btn">Заказать звонок</a>
+          </div>
+        </header>
+
+        <div class="main-info">
+          <h1 class="selection">Подбор кроссовок</h1>
+          <h2 class="needs">с учётом ваших потребностей</h2>
+          <div class="facilities">
+            <figure>
+              <img
+                src="./Assets/intro/Facilities/timer.svg"
+                alt="timer"
+                class="timer"
+              />
+              <figcaption class="facilities-caption">
+                Время подбора: 10 минут
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./Assets/intro/Facilities/hand-cart.svg"
+                alt="hand-cart"
+                class="hand-cart"
+              />
+              <figcaption class="facilities-caption">
+                Бесплатная доставка
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="./Assets/intro/Facilities/message.svg"
+                alt="message"
+                class="message"
+              />
+              <figcaption class="facilities-caption">
+                Ответим на все вопросы
+              </figcaption>
+            </figure>
+          </div>
+          <button
+            onclick="consult.showModal(); success.close()"
+            class="consultation"
+          >
+            Заказать консультацию
+          </button>
+
+          <p class="go-catalog">
+            или <a href="" class="a-go-catalog">ПЕРЕЙТИ В КАТАЛОГ</a>
+          </p>
+
+          <dialog id="consult">
+            <h2 class="title-form">Просто заполните форму заявки</h2>
+            <h3 class="recall-form">и мы перезвоним вам в течении 10 минут</h3>
+            <form class="consult-form" action="#">
+              <input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Ваше имя"
+                required
+                autocomplete="additional-name"
+              />
+              <!-- required для обязательного поля, autocomplete для автозаполнения -->
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Ваш телефон"
+                required
+                autocomplete="cc-number"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Ваш E-mail"
+                required
+                autocomplete="email"
+              />
+              <input
+                type="submit"
+                value="Заказать консультацию"
+                onclick="consult.close(); success.showModal()"
+              />
+              <span class="close" onclick="consult.close()" title="Close Window"
+                >🞭</span
+              >
+            </form>
+          </dialog>
+
+          <dialog id="success">
+            <h2 class="title-form">Консультация заказана!</h2>
+            <h3 class="recall-form">спасибо за то, что выбрали нас</h3>
+            <button class="Done" onclick="success.close()">☑</button>
+          </dialog>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="advantages">
+      <div class="container">
+        <h2 class="title-advantages">Наши преимущества</h2>
+        <div class="advant-descr">
+          <figure class="cup">
+            <img
+              class="advant-img"
+              src="./Assets/advantages/cup.svg"
+              alt="cup"
+            />
+            <figcaption>
+              <h3 class="descr-title">Делимся опытом</h3>
+              <p class="descr-subtitle">
+                Наши сотрудники всегда готовы поделиться своим опытом, так как
+                сами бегают полумарафоны, переплыли Босфор, готовятся к
+                соревнованиям по триатлону!
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="heart">
+            <img
+              class="advant-img"
+              src="./Assets/advantages/heart.svg"
+              alt="heart"
+            />
+            <figcaption>
+              <h3 class="descr-title">Заботимся о здоровье</h3>
+              <p class="descr-subtitle">
+                Мы работаем для того, чтобы Ваши занятия спортом шли на пользу
+                Вашему здоровью и были в радость Вам и Вашим близким!
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="shoe">
+            <img
+              class="advant-img"
+              src="./Assets/advantages/shoe.svg"
+              alt="shoe"
+            />
+            <figcaption>
+              <h3 class="descr-title">Учим бегать</h3>
+              <p class="descr-subtitle">
+                Помогаем с обучением правильной технике бега! Дружим с
+                крупнейшей школой бега в России -
+                <a
+                  href="https://yandex.ru/maps/org/shkola_bega_i_love_running/32942271899/?ll=37.617700%2C55.755874&z=9"
+                  target="_blank"
+                  class="advant-a"
+                  >I LOVE RUNNING</a
+                >
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact-Form -->
+    <section class="contact-forms">
+      <div class="container">
+        <h2>Получите бесплатную консультацию по подбору</h2>
+        <h3>
+          Просто заполните форму заявки и мы перезвоним вам в течении 10 минут
+        </h3>
+
+        <form action="#">
+          <input
+            type="text"
+            name="text"
+            id="text"
+            placeholder="Ваше имя"
+            required
+            autocomplete="additional-name"
+          />
+          <!-- required для обязательного поля, autocomplete для автозаполнения -->
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            placeholder="Ваш телефон"
+            required
+            autocomplete="cc-number"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Ваш E-mail"
+            required
+            autocomplete="email"
+          />
+          <input
+            type="submit"
+            value="Заказать консультацию"
+            onclick="consult.close(); success.showModal()"
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- Carousel -->
+    <section class="carousel">
+      <div class="container">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./Assets/carousel/slide1.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./Assets/carousel/slide2.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./Assets/carousel/slide3.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog -->
+    <section class="catalog">
+      <div class="container">
+        <h2>Каталог КРОССОВОК</h2>
+
+        <!-- Pages Catalog -->
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="pills-home-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-home"
+              type="button"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+            >
+              <span>Для фитнеса</span>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-profile-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-profile"
+              type="button"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >
+              <span>Для бега</span>
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-contact-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-contact"
+              type="button"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+            >
+              <span>Для триатлона</span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- Content Cards -->
+        <div class="tab-content" id="pills-tabContent">
+          <!-- For Fitness -->
+          <div
+            class="tab-pane fade show active"
+            id="pills-home"
+            role="tabpanel"
+            aria-labelledby="pills-home-tab"
+            tabindex="0"
+          >
+            <div class="card-wrapper">
+              <div class="product-card">
+                <div class="front-side">
+                  <img src="./Assets/catalog/photo.jpg" alt="yelow-sneakers" />
+                  <h3>Модель Polar FT1</h3>
+                  <h4>
+                    Для первых шагов в тренировках, основанных на сердечном
+                    ритме
+                  </h4>
+                  <span onclick="frontSideFlip(event)">подробнее</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">4 750 руб.</div>
+                      <div class="price">4 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="button"
+                      value="КУПИТЬ"
+                      class="buy-btn"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+
+                <div class="back-side">
+                  <ul>
+                    <li>
+                      обеспечивают хорошую амортизацию и поддержку для стопы
+                    </li>
+                    <li>
+                      улучшают производительность бегуна за счет оптимальной
+                      поддержки и амортизации.
+                    </li>
+                    <li>
+                      обеспечивают комфорт и защиту стопы во время бега, что
+                      способствует улучшению общего опыта тренировок.
+                    </li>
+                    <li>
+                      обеспечивают хорошее сцепление с поверхностью и улучшенную
+                      устойчивость во время бега.
+                    </li>
+                  </ul>
+
+                  <span onclick="backSideFlip(event)">Назад</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">4 750 руб.</div>
+                      <div class="price">4 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="button"
+                      value="КУПИТЬ"
+                      class="buy-btn"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <div class="front-side">
+                  <img src="./Assets/catalog/photo.jpg" alt="yelow-sneakers" />
+                  <h3>Модель Polar MB2</h3>
+                  <h4>
+                    Для первых шагов в тренировках, основанных на сердечном
+                    ритме
+                  </h4>
+                  <span onclick="frontSideFlip(event)">подробнее</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">5 750 руб.</div>
+                      <div class="price">5 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="КУПИТЬ"
+                      data-product-name="Модель Polar FT1"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+
+                <div class="back-side">
+                  <ul>
+                    <li>
+                      обеспечивают хорошую амортизацию и поддержку для стопы
+                    </li>
+                    <li>
+                      улучшают производительность бегуна за счет оптимальной
+                      поддержки и амортизации.
+                    </li>
+                    <li>
+                      обеспечивают комфорт и защиту стопы во время бега, что
+                      способствует улучшению общего опыта тренировок.
+                    </li>
+                    <li>
+                      обеспечивают хорошее сцепление с поверхностью и улучшенную
+                      устойчивость во время бега.
+                    </li>
+                  </ul>
+
+                  <span onclick="backSideFlip(event)">Назад</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">5 750 руб.</div>
+                      <div class="price">5 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="КУПИТЬ"
+                      data-product-name="Модель Polar FT1"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <div class="front-side">
+                  <img src="./Assets/catalog/photo.jpg" alt="yelow-sneakers" />
+                  <h3>Модель Polar HZ3</h3>
+                  <h4>
+                    Для первых шагов в тренировках, основанных на сердечном
+                    ритме
+                  </h4>
+                  <span onclick="frontSideFlip(event)">подробнее</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">6 750 руб.</div>
+                      <div class="price">6 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="КУПИТЬ"
+                      data-product-name="Модель Polar FT1"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+
+                <div class="back-side">
+                  <ul>
+                    <li>
+                      обеспечивают хорошую амортизацию и поддержку для стопы
+                    </li>
+                    <li>
+                      улучшают производительность бегуна за счет оптимальной
+                      поддержки и амортизации.
+                    </li>
+                    <li>
+                      обеспечивают комфорт и защиту стопы во время бега, что
+                      способствует улучшению общего опыта тренировок.
+                    </li>
+                    <li>
+                      обеспечивают хорошее сцепление с поверхностью и улучшенную
+                      устойчивость во время бега.
+                    </li>
+                  </ul>
+
+                  <span onclick="backSideFlip(event)">Назад</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">6 750 руб.</div>
+                      <div class="price">6 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="КУПИТЬ"
+                      data-product-name="Модель Polar FT1"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- For Running -->
+          <div
+            class="tab-pane fade"
+            id="pills-profile"
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab"
+            tabindex="0"
+          >
+            <div class="card-wrapper">
+              <div class="product-card">
+                <div class="front-side">
+                  <img src="./Assets/catalog/photo2.jpg" alt="yelow-sneakers" />
+                  <h3>Модель Suunto FT1</h3>
+                  <h4>
+                    Для первых шагов в тренировках, основанных на сердечном
+                    ритме
+                  </h4>
+                  <span onclick="frontSideFlip(event)">подробнее</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">4 750 руб.</div>
+                      <div class="price">4 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="КУПИТЬ"
+                      data-product-name="Модель Polar FT1"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+
+                <div class="back-side">
+                  <ul>
+                    <li>
+                      обеспечивают хорошую амортизацию и поддержку для стопы
+                    </li>
+                    <li>
+                      улучшают производительность бегуна за счет оптимальной
+                      поддержки и амортизации.
+                    </li>
+                    <li>
+                      обеспечивают комфорт и защиту стопы во время бега, что
+                      способствует улучшению общего опыта тренировок.
+                    </li>
+                    <li>
+                      обеспечивают хорошее сцепление с поверхностью и улучшенную
+                      устойчивость во время бега.
+                    </li>
+                  </ul>
+
+                  <span onclick="backSideFlip(event)">Назад</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">4 750 руб.</div>
+                      <div class="price">4 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="КУПИТЬ"
+                      data-product-name="Модель Polar FT1"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <div class="front-side">
+                  <img src="./Assets/catalog/photo2.jpg" alt="yelow-sneakers" />
+                  <h3>Модель Suunto MB2</h3>
+                  <h4>
+                    Для первых шагов в тренировках, основанных на сердечном
+                    ритме
+                  </h4>
+                  <span onclick="frontSideFlip(event)">подробнее</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">5 750 руб.</div>
+                      <div class="price">5 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="КУПИТЬ"
+                      data-product-name="Модель Polar FT1"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+
+                <div class="back-side">
+                  <ul>
+                    <li>
+                      обеспечивают хорошую амортизацию и поддержку для стопы
+                    </li>
+                    <li>
+                      улучшают производительность бегуна за счет оптимальной
+                      поддержки и амортизации.
+                    </li>
+                    <li>
+                      обеспечивают комфорт и защиту стопы во время бега, что
+                      способствует улучшению общего опыта тренировок.
+                    </li>
+                    <li>
+                      обеспечивают хорошее сцепление с поверхностью и улучшенную
+                      устойчивость во время бега.
+                    </li>
+                  </ul>
+
+                  <span onclick="backSideFlip(event)">Назад</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">5 750 руб.</div>
+                      <div class="price">5 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="КУПИТЬ"
+                      data-product-name="Модель Polar FT1"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <div class="front-side">
+                  <img src="./Assets/catalog/photo2.jpg" alt="yelow-sneakers" />
+                  <h3>Модель Suunto HZ3</h3>
+                  <h4>
+                    Для первых шагов в тренировках, основанных на сердечном
+                    ритме
+                  </h4>
+                  <span onclick="frontSideFlip(event)">подробнее</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">6 750 руб.</div>
+                      <div class="price">6 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="КУПИТЬ"
+                      data-product-name="Модель Polar FT1"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+
+                <div class="back-side">
+                  <ul>
+                    <li>
+                      обеспечивают хорошую амортизацию и поддержку для стопы
+                    </li>
+                    <li>
+                      улучшают производительность бегуна за счет оптимальной
+                      поддержки и амортизации.
+                    </li>
+                    <li>
+                      обеспечивают комфорт и защиту стопы во время бега, что
+                      способствует улучшению общего опыта тренировок.
+                    </li>
+                    <li>
+                      обеспечивают хорошее сцепление с поверхностью и улучшенную
+                      устойчивость во время бега.
+                    </li>
+                  </ul>
+
+                  <span onclick="backSideFlip(event)">Назад</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">6 750 руб.</div>
+                      <div class="price">6 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="submit"
+                      value="КУПИТЬ"
+                      data-product-name="Модель Polar FT1"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- For Triatlon -->
+          <div
+            class="tab-pane fade"
+            id="pills-contact"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab"
+            tabindex="0"
+          >
+            <div class="card-wrapper">
+              <div class="product-card">
+                <div class="front-side">
+                  <img src="./Assets/catalog/photo3.jpg" alt="yelow-sneakers" />
+                  <h3>Модель Triaslon FT1</h3>
+                  <h4>
+                    Для первых шагов в тренировках, основанных на сердечном
+                    ритме
+                  </h4>
+                  <span onclick="frontSideFlip(event)">подробнее</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">4 750 руб.</div>
+                      <div class="price">4 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="button"
+                      value="КУПИТЬ"
+                      class="buy-btn"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+
+                <div class="back-side">
+                  <ul>
+                    <li>
+                      обеспечивают хорошую амортизацию и поддержку для стопы
+                    </li>
+                    <li>
+                      улучшают производительность бегуна за счет оптимальной
+                      поддержки и амортизации.
+                    </li>
+                    <li>
+                      обеспечивают комфорт и защиту стопы во время бега, что
+                      способствует улучшению общего опыта тренировок.
+                    </li>
+                    <li>
+                      обеспечивают хорошее сцепление с поверхностью и улучшенную
+                      устойчивость во время бега.
+                    </li>
+                  </ul>
+
+                  <span onclick="backSideFlip(event)">Назад</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">4 750 руб.</div>
+                      <div class="price">4 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="button"
+                      value="КУПИТЬ"
+                      class="buy-btn"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <div class="front-side">
+                  <img src="./Assets/catalog/photo3.jpg" alt="yelow-sneakers" />
+                  <h3>Модель Triaslon MB2</h3>
+                  <h4>
+                    Для первых шагов в тренировках, основанных на сердечном
+                    ритме
+                  </h4>
+                  <span onclick="frontSideFlip(event)">подробнее</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">5 750 руб.</div>
+                      <div class="price">5 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="button"
+                      value="КУПИТЬ"
+                      class="buy-btn"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+
+                <div class="back-side">
+                  <ul>
+                    <li>
+                      обеспечивают хорошую амортизацию и поддержку для стопы
+                    </li>
+                    <li>
+                      улучшают производительность бегуна за счет оптимальной
+                      поддержки и амортизации.
+                    </li>
+                    <li>
+                      обеспечивают комфорт и защиту стопы во время бега, что
+                      способствует улучшению общего опыта тренировок.
+                    </li>
+                    <li>
+                      обеспечивают хорошее сцепление с поверхностью и улучшенную
+                      устойчивость во время бега.
+                    </li>
+                  </ul>
+
+                  <span onclick="backSideFlip(event)">Назад</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">5 750 руб.</div>
+                      <div class="price">5 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="button"
+                      value="КУПИТЬ"
+                      class="buy-btn"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-card">
+                <div class="front-side">
+                  <img src="./Assets/catalog/photo3.jpg" alt="yelow-sneakers" />
+                  <h3>Модель Triaslon HZ3</h3>
+                  <h4>
+                    Для первых шагов в тренировках, основанных на сердечном
+                    ритме
+                  </h4>
+                  <span onclick="frontSideFlip(event)">подробнее</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">6 750 руб.</div>
+                      <div class="price">6 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="button"
+                      value="КУПИТЬ"
+                      class="buy-btn"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+
+                <div class="back-side">
+                  <ul>
+                    <li>
+                      обеспечивают хорошую амортизацию и поддержку для стопы
+                    </li>
+                    <li>
+                      улучшают производительность бегуна за счет оптимальной
+                      поддержки и амортизации.
+                    </li>
+                    <li>
+                      обеспечивают комфорт и защиту стопы во время бега, что
+                      способствует улучшению общего опыта тренировок.
+                    </li>
+                    <li>
+                      обеспечивают хорошее сцепление с поверхностью и улучшенную
+                      устойчивость во время бега.
+                    </li>
+                  </ul>
+
+                  <span onclick="backSideFlip(event)">Назад</span>
+
+                  <hr />
+
+                  <div class="wrapper">
+                    <div class="prices">
+                      <div class="old-price">6 750 руб.</div>
+                      <div class="price">6 500 руб.</div>
+                    </div>
+
+                    <input
+                      type="button"
+                      value="КУПИТЬ"
+                      class="buy-btn"
+                      onclick="showOrderModal(this)"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <dialog id="order">
+            <h2 class="order-title-form">Ваш заказ:</h2>
+            <h3 class="recall-form">...</h3>
+            <form class="consult-form" action="#">
+              <input
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Ваше имя"
+                required
+                autocomplete="additional-name"
+              />
+              <!-- required для обязательного поля, autocomplete для автозаполнения -->
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Ваш телефон"
+                required
+                autocomplete="cc-number"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Ваш E-mail"
+                required
+                autocomplete="email"
+              />
+              <input type="submit" value="Купить" onclick="order.close()" />
+
+              <span class="close" onclick="order.close()" title="Close Window"
+                >🞭</span
+              >
+            </form>
+          </dialog>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+      <div class="container">
+        <h2>отзывы клиентов</h2>
+        <div class="rewiew-wrapperr">
+          <div class="com-card">
+            <img class="avatar" src="./Assets/reviews/photo_1.jpg" alt="client 1"/>
+            <h3 class="name">Ирина Иванченко</h3>
+            <h4 class="count">2 полумарафона</h4>
+            <p class="comment-3">
+              Не знала, что себе купить - обратилась к ребятам из ExellentTime -
+              подобрали спортивную модель кроссовок, который подошёл именно под
+              мои цели и финансовые возможности. Эти кроссовки просто
+              невероятны! Они так удобны и легки, что бегать в них - одно
+              удовольствие. Особенно понравилась амортизация, она смягчает удары
+              при беге по твердым поверхностямСпасибо, ExellentTime!
+            </p>
+          </div>
+          <div class="com-card">
+            <img class="avatar" src="./Assets/reviews/photo_2.jpg" alt="client 2"/>
+            <h3 class="name">Иван Сёмочкин</h3>
+            <h4 class="count">1 полумарафон</h4>
+            <p class="comment-3">
+              Я купил эти кроссовки для занятий в зале, и они просто идеально
+              подходят для тренировок. Поддержка и устойчивость стопы во время
+              подъемов и прыжков - просто на высшем уровне! <br /><br />
+              С ними подготовился к своему первому полумарафону! Спасибо!!!
+            </p>
+          </div>
+          <div class="com-card">
+            <img class="avatar" src="./Assets/reviews/photo_3.jpg" alt="client 3"/>
+            <h3 class="name">Юлия Дашкина</h3>
+            <h4 class="count">2 полумарафона</h4>
+            <p class="comment">
+              Отличные кроссовки для длительных пробежек! Легкие, дышащие
+              материалы делают их идеальным выбором для моих ежедневных
+              тренировок. Ноги не устают, и я чувствую себя комфортно во время
+              бега. <br /><br />
+              Позвонила, ребята поинтересовались моими целями и подобрали очень
+              интересный вариант со скидкой! Теперь бегаю и наслаждаюсь бегом!
+              Пробежала уже 2 полумарафона и несколько более коротких забегов и
+              не намерена останавливаться!<br /><br />Спасибо!!!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+     <footer>
+      
+      <!-- map -->
+       <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeb0caf42864968cb345d647ae03f0171a8018ecb38b2cd431bc7522fc1961e92&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+
+       <!-- infoCard -->
+        <div class="info-card">
+          <p class="adress">Москва, Мясницкий проезд, д.3с1</p>
+          <p class="tel">8 (499) 922-89-74</p>
+          <div class="social-media">
+            <img src="./Assets/footer/social-media/facebook.svg" alt="facebook">
+            <img src="./Assets/footer/social-media/instagram.svg" alt="instagram">
+            <img src="./Assets/footer/social-media/pintrest.svg" alt="pinterest">
+          </div>
+          <span class="close-dialog" onclick="
+          this.parentElement.style.display='none'
+          "
+          title="close-this-window">🞭</span>
+        </div>
+
+     </footer>
+
+
+
+
+
+    <script
+      src="./Assets/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.min.js"
+      defer
+    ></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
