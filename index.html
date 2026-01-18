@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -68,7 +68,10 @@
             </figure>
           </div>
           <button
-            onclick="consult.showModal(); success.close()"
+            onclick="
+              consult.showModal();
+              success.close();
+            "
             class="consultation"
           >
             Заказать консультацию
@@ -77,52 +80,6 @@
           <p class="go-catalog">
             или <a href="" class="a-go-catalog">ПЕРЕЙТИ В КАТАЛОГ</a>
           </p>
-
-          <dialog id="consult">
-            <h2 class="title-form">Просто заполните форму заявки</h2>
-            <h3 class="recall-form">и мы перезвоним вам в течении 10 минут</h3>
-            <form class="consult-form" action="#">
-              <input
-                type="text"
-                name="text"
-                id="text"
-                placeholder="Ваше имя"
-                required
-                autocomplete="additional-name"
-              />
-              <!-- required для обязательного поля, autocomplete для автозаполнения -->
-              <input
-                type="tel"
-                name="tel"
-                id="tel"
-                placeholder="Ваш телефон"
-                required
-                autocomplete="cc-number"
-              />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Ваш E-mail"
-                required
-                autocomplete="email"
-              />
-              <input
-                type="submit"
-                value="Заказать консультацию"
-                onclick="consult.close(); success.showModal()"
-              />
-              <span class="close" onclick="consult.close()" title="Close Window"
-                >🞭</span
-              >
-            </form>
-          </dialog>
-
-          <dialog id="success">
-            <h2 class="title-form">Консультация заказана!</h2>
-            <h3 class="recall-form">спасибо за то, что выбрали нас</h3>
-            <button class="Done" onclick="success.close()">☑</button>
-          </dialog>
         </div>
       </div>
     </section>
@@ -224,7 +181,10 @@
           <input
             type="submit"
             value="Заказать консультацию"
-            onclick="consult.close(); success.showModal()"
+            onclick="
+              consult.close();
+              success.showModal();
+            "
           />
         </form>
       </div>
@@ -1007,7 +967,11 @@
         <h2>отзывы клиентов</h2>
         <div class="rewiew-wrapperr">
           <div class="com-card">
-            <img class="avatar" src="./Assets/reviews/photo_1.jpg" alt="client 1"/>
+            <img
+              class="avatar"
+              src="./Assets/reviews/photo_1.jpg"
+              alt="client 1"
+            />
             <h3 class="name">Ирина Иванченко</h3>
             <h4 class="count">2 полумарафона</h4>
             <p class="comment-3">
@@ -1020,7 +984,11 @@
             </p>
           </div>
           <div class="com-card">
-            <img class="avatar" src="./Assets/reviews/photo_2.jpg" alt="client 2"/>
+            <img
+              class="avatar"
+              src="./Assets/reviews/photo_2.jpg"
+              alt="client 2"
+            />
             <h3 class="name">Иван Сёмочкин</h3>
             <h4 class="count">1 полумарафон</h4>
             <p class="comment-3">
@@ -1031,7 +999,11 @@
             </p>
           </div>
           <div class="com-card">
-            <img class="avatar" src="./Assets/reviews/photo_3.jpg" alt="client 3"/>
+            <img
+              class="avatar"
+              src="./Assets/reviews/photo_3.jpg"
+              alt="client 3"
+            />
             <h3 class="name">Юлия Дашкина</h3>
             <h4 class="count">2 полумарафона</h4>
             <p class="comment">
@@ -1050,31 +1022,87 @@
     </section>
 
     <!-- Footer -->
-     <footer>
-      
+    <footer>
       <!-- map -->
-       <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeb0caf42864968cb345d647ae03f0171a8018ecb38b2cd431bc7522fc1961e92&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeb0caf42864968cb345d647ae03f0171a8018ecb38b2cd431bc7522fc1961e92&amp;source=constructor"
+        width="100%"
+        height="100%"
+        frameborder="0"
+      ></iframe>
 
-       <!-- infoCard -->
-        <div class="info-card">
-          <p class="adress">Москва, Мясницкий проезд, д.3с1</p>
-          <p class="tel">8 (499) 922-89-74</p>
-          <div class="social-media">
-            <img src="./Assets/footer/social-media/facebook.svg" alt="facebook">
-            <img src="./Assets/footer/social-media/instagram.svg" alt="instagram">
-            <img src="./Assets/footer/social-media/pintrest.svg" alt="pinterest">
-          </div>
-          <span class="close-dialog" onclick="
-          this.parentElement.style.display='none'
-          "
-          title="close-this-window">🞭</span>
+      <!-- infoCard -->
+      <div class="info-card">
+        <p class="adress">Москва, Мясницкий проезд, д.3с1</p>
+        <p class="tel">8 (499) 922-89-74</p>
+        <div class="social-media">
+          <img src="./Assets/footer/social-media/facebook.svg" alt="facebook" />
+          <img
+            src="./Assets/footer/social-media/instagram.svg"
+            alt="instagram"
+          />
+          <img
+            src="./Assets/footer/social-media/pintrest.svg"
+            alt="pinterest"
+          />
         </div>
+        <span
+          class="close-dialog"
+          onclick="this.parentElement.style.display = 'none'"
+          title="close-this-window"
+          >🞭</span
+        >
+      </div>
+    </footer>
 
-     </footer>
+    <dialog id="consult">
+      <h2 class="title-form">Просто заполните форму заявки</h2>
+      <h3 class="recall-form">и мы перезвоним вам в течении 10 минут</h3>
+      <form class="consult-form" action="#">
+        <input
+          type="text"
+          name="text"
+          id="text"
+          placeholder="Ваше имя"
+          required
+          autocomplete="additional-name"
+        />
+        <!-- required для обязательного поля, autocomplete для автозаполнения -->
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="Ваш телефон"
+          required
+          autocomplete="cc-number"
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Ваш E-mail"
+          required
+          autocomplete="email"
+        />
+        <input
+          type="submit"
+          value="Заказать консультацию"
+          onclick="
+            consult.close();
+            success.showModal();
+          "
+        />
+        <span class="close" onclick="consult.close()" title="Close Window"
+          >🞭</span
+        >
+      </form>
+    </dialog>
 
-
-
-
+    <dialog id="success">
+      <h2 class="title-form">Консультация заказана!</h2>
+      <h3 class="recall-form">спасибо за то, что выбрали нас</h3>
+      <button class="Done" onclick="success.close()">☑</button>
+    </dialog>
 
     <script
       src="./Assets/bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.min.js"
